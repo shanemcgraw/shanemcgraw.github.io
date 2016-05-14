@@ -8,14 +8,25 @@
   </head>
   <body>
     <a-scene>
-      <a-entity geometry="primitive: box" material="color: red"></a-entity>
-      <a-entity id="river" geometry="primitive: plane" material="color: blue"
-          position="-10 0 0" sound="src: river.mp3; autoplay: true"></a-entity>
+      <a-sky color="#6EBAA7">
+      
       <!-- <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E" ></a-sphere>
       <a-cube position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9"></a-cube>
       <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
       <a-sky color="#ECECEC"></a-sky> -->
+      <a-sphere position="0 1.25 -1" radius="1.25" color="#66cc00" >
+        <a-sphere position="5 0 0" radius="1.25" color="#EF2D5E"></a-sphere>
+        <a-light intensity="1">
+          <a-animation attribute="intensity" to="3" repeat="indefinite"></a-animation>
+        </a-light>
+        <a-animation attribute="rotation"
+                     dur="10000"
+                     fill="forwards"
+                     to="360 360 360"
+                     repeat="indefinite"></a-animation>
+      </a-sphere>
+      </a-sky>
     </a-scene>
     <script>
       
